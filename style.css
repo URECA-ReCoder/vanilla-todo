@@ -1,1 +1,69 @@
-/* 자유롭게 디자인 해 주세요! */
+@import './reset.css';
+
+html,
+body {
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(#e66465, #9198e5);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 600px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+.header {
+  /* justify-content: center; */
+  flex-direction: row;
+}
+header {
+  margin: 5% 5% 0;
+  font-size: 24px;
+}
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid lightgray;
+  padding: 5%;
+}
+#todo-input {
+  width: 80%;
+  height: 60%;
+  margin: 1%;
+  padding: 5%;
+  border: 0.5px solid gray;
+  border-radius: 15px;
+}
+#add-todo-btn {
+  height: 60%;
+  margin: 1%;
+  border: 0px;
+  background-color: transparent;
+}
+.body {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid lightgray;
+}
+#todo-list-title {
+  margin: 18px;
+}
+.footer {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+#done-todo-list-title {
+  margin: 18px;
+}
