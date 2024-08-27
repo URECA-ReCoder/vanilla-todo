@@ -75,6 +75,7 @@ function createTodoElement(todo) {
     newTodoList.splice(index, 1);
     localStorage.setItem("todoList", JSON.stringify(newTodoList));
     newLi.remove();
+    updateItemCount();
   });
 
   if (todo.complete) {
@@ -87,4 +88,13 @@ function createTodoElement(todo) {
   }
 
   newDeleteBtn.textContent = "x";
+  updateItemCount();
+}
+
+function updateItemCount() {
+    const todoNum = document.getElementById('todo-num');
+    const doneNum = document.getElementById('done-num');
+    todoNum.textContent = `📋 Todo (${todoListElement.getElementsByTagName('li').length})`;
+    doneNum.textContent = `👍🏻 Done (${doneListElement.getElementsByTagName('li').length})`;
+    console.log(todoNum, doneNum);
 }
