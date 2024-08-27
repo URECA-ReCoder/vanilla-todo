@@ -1,5 +1,8 @@
 @import './reset.css';
 
+* {
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
 html,
 body {
   margin: 0;
@@ -66,4 +69,15 @@ header {
 }
 #done-todo-list-title {
   margin: 18px;
+}
+
+ul {
+  height: 70%;
+  overflow: auto;
+
+  padding-left: 40px;
+}
+
+li {
+  margin: 0 16px 16px;
 }
