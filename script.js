@@ -33,9 +33,8 @@ function setTodoList(todo) {
   let newTodoList = getTodoList();
   for (let i = 0; i < newTodoList.length; i++) {//todo done 여부 확인
     if (newTodoList[i].content === todo.content && newTodoList[i].complete !== todo.complete) {
-      newTodoList[i].complete = todo.complete;
-      localStorage.setItem("todoList", JSON.stringify(newTodoList));
-      return;
+      newTodoList.splice(i, 1);
+      break;
     }
   }
   newTodoList.push(todo);
