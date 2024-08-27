@@ -67,6 +67,7 @@ function createTodoElement(todo) {
     setTodoList(todo);
     createTodoElement(todo);
     newLi.remove();
+    updateItemCount();
   });
 
   newDeleteBtn.addEventListener("click", () => {
