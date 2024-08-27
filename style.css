@@ -1,1 +1,11 @@
 /* 자유롭게 디자인 해 주세요! */
+@font-face {
+        font-family: 'RixXladywatermelonR';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-4@1.0/RixXladywatermelonR.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+body {
+    font-family: RixXladywatermelonR;
+}
