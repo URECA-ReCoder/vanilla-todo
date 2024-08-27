@@ -1,3 +1,11 @@
+/*눈누-수박양체*/
+@font-face {
+    font-family: 'RixXladywatermelonR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-4@1.0/RixXladywatermelonR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -5,7 +13,8 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
-    background: linear-gradient(to right, #FFB3B3, #FFD9B3, #FFFFB3); /*선형 그라데이션*/
+    background: linear-gradient(to right, #FFB3B3, #FFD9B3, #FFFFB3);
+    font-family: 'RixXladywatermelonR', sans-serif; 
 }
 
 .container {
@@ -27,6 +36,7 @@ header {
     font-size: 24px;
     font-weight: 500;
     display: block;
+    font-family: 'RixXladywatermelonR', sans-serif; 
 }
 
 .input-box {
@@ -48,6 +58,7 @@ form {
     padding: 5%;
     border-radius: 15px;
     border: solid 1px lightgrey;
+    font-family: 'RixXladywatermelonR', sans-serif; 
 }
 
 .todo-list-box {
@@ -71,17 +82,20 @@ h4 {
     margin: 5%;
     display: block;
     font-weight: bold;
+    font-family: 'RixXladywatermelonR', sans-serif; 
 }
 
 .todo-list, .done-list {
     height: 150px;
     overflow: auto;
+    font-family: 'RixXladywatermelonR', sans-serif; 
 }
 
 ul {
     display: block;
     list-style-type: disc;
     padding-inline-start: 40px;
+    font-family: 'RixXladywatermelonR', sans-serif; 
 }
 
 .done-list-box {
@@ -89,16 +103,17 @@ ul {
 }
 
 li:hover {
-    cursor: pointer; /* 항목에 커서를 올리면 pointer로 바뀌게 설정 */
+    cursor: pointer;
 }
 
 .done-item {
     color: gray;
     text-decoration: line-through;
+    font-family: 'RixXladywatermelonR', sans-serif; 
 }
 
-.done-item span { /* 텍스트와 이모지 구분(이모지에는 효과 안넣음) */
+.done-item span {
     text-decoration: none;
     display: inline-block;
-    margin-left: 8px; /* 텍스트와 이모지 사이에 여백 설정 */
+    margin-left: 8px;
 }
