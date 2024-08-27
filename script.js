@@ -14,6 +14,10 @@ const todoListElement = document.getElementById("todo-list");
 const doneListElement = document.getElementById("done-list");
 
 todoInputButton.addEventListener("click", () => {
+  if (todoInputElement.value === "") {
+    alert("한 글자 이상 입력해주세요!");
+    return;
+  }
   const newTodo = {
     content: todoInputElement.value,
     complete: false,
@@ -31,8 +35,12 @@ function getTodoList() {
 
 function setTodoList(todo) {
   let newTodoList = getTodoList();
-  for (let i = 0; i < newTodoList.length; i++) {//todo done 여부 확인
-    if (newTodoList[i].content === todo.content && newTodoList[i].complete !== todo.complete) {
+  for (let i = 0; i < newTodoList.length; i++) {
+    //todo done 여부 확인
+    if (
+      newTodoList[i].content === todo.content &&
+      newTodoList[i].complete !== todo.complete
+    ) {
       newTodoList.splice(i, 1);
       break;
     }
@@ -53,14 +61,14 @@ function createTodoElement(todo) {
   newLi.appendChild(newDeleteBtn);
 
   newSpan.textContent = todo.content;
-  
+
   newDoneBtn.addEventListener("click", () => {
     todo.complete = !todo.complete;
     setTodoList(todo);
     createTodoElement(todo);
     newLi.remove();
   });
-  
+
   newDeleteBtn.addEventListener("click", () => {
     const newTodoList = getTodoList();
     const index = newTodoList.indexOf(todo);
@@ -77,6 +85,6 @@ function createTodoElement(todo) {
     newDoneBtn.innerHTML = "&nbsp;";
     todoListElement.appendChild(newLi);
   }
-  
+
   newDeleteBtn.textContent = "x";
 }
