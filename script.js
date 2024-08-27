@@ -53,6 +53,7 @@ function createTodoElement(todo) {
   newLi.appendChild(newDeleteBtn);
 
   newSpan.textContent = todo.content;
+  
   newDoneBtn.addEventListener("click", () => {
     todo.complete = !todo.complete;
     setTodoList(todo);
@@ -70,11 +71,12 @@ function createTodoElement(todo) {
 
   if (todo.complete) {
     //완료된 todo인 경우
-    newSpan.style.textDecoration = "line-through";
-    newDoneBtn.textContent = "V";
+    newDoneBtn.innerText = "v";
     doneListElement.appendChild(newLi);
   } else {
-    newDoneBtn.textContent = "";
+    newDoneBtn.innerHTML = "&nbsp;";
     todoListElement.appendChild(newLi);
   }
+  
+  newDeleteBtn.textContent = "x";
 }
