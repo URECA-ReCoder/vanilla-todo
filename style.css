@@ -81,3 +81,15 @@ ul {
 li {
   margin: 0 16px 16px;
 }
+
+#done-todo-item {
+  color: lightgray;
+  text-decoration: line-through;
+}
+
+#delete-btn,
+#done-delete-btn {
+  margin-left: 10px;
+  background: transparent;
+  border: 0px;
+}
