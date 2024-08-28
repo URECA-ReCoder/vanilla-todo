@@ -8,7 +8,7 @@ const doneCount = document.querySelector(".done-list-container h2");
 let todoItems = []; 
 let doneItems = []; 
 
-//  버튼 클릭 시 호출되는 이벤트 리스너를 설정
+// 버튼 클릭 시 호출되는 이벤트 리스너를 설정
 addButton.addEventListener("click", () => {
   const task = todoInput.value.trim();
   if (task) {
@@ -35,6 +35,12 @@ function completeTodoItem(index) {
   doneItems.push(completedTask[0]); // 완료된 항목을 doneItems에 추가
   renderTodoList(); // 할 일 목록을 렌더링
   renderDoneList(); // 완료된 항목 목록을 렌더링
+}
+
+// done 목록에서 항목을 제거
+function removeDoneItem(index) {
+  doneItems.splice(index, 1); // 인덱스에 해당하는 항목을 제거
+  renderDoneList(); // 업데이트된 완료된 항목 목록을 렌더링
 }
 
 // 할 일 목록을 화면에 렌더링
@@ -67,9 +73,17 @@ function renderTodoList() {
 // 완료된 항목 목록을 화면에 렌더링
 function renderDoneList() {
   doneList.innerHTML = ""; // 기존 목록 초기화
-  doneItems.forEach(item => {
+  doneItems.forEach((item, index) => {
     const li = document.createElement("li");
     li.textContent = item;
+
+    // 삭제 버튼 생성
+    const deleteBtn = document.createElement("span");
+    deleteBtn.textContent = "🗑️";
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.addEventListener("click", () => removeDoneItem(index));
+
+    li.appendChild(deleteBtn);
     doneList.appendChild(li);
   });
   // 완료된 항목 수를 업데이트
