@@ -17,8 +17,6 @@ html {
 body {
     font-family: RixXladywatermelonR;
     max-width: 500px;
-    height: fit-content;
-    margin: 0 auto;
     padding: 10px;
     text-align: center;
     display: flex;
@@ -31,7 +29,7 @@ body {
     position: relative;
     display: flex;
     width: 450px;
-    height: 620px;
+    height: 680px;
     flex-direction: column;
     background-color: #fef79fbd;
     overflow: hidden;
@@ -109,7 +107,7 @@ button {
 }
 
 section {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 h4 {
@@ -126,7 +124,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 130px;
+    height: 168px;
     overflow-y: scroll;
 }
 
