@@ -1,1 +1,84 @@
 /* 자유롭게 디자인 해 주세요! */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #d8bfd8, #ffb6c1);
+}
+
+.container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-list-container, .done-list-container {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 40px;
+}
+
+li .delete-btn {
+  cursor: pointer;
+  color: red;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+  /* 완료된 항목 텍스트에 대한 스타일 */
+.done-item-text {
+  color: gray;     
+  text-decoration: line-through; 
+}
+
+/* 삭제 버튼의 스타일 */
+.delete-btn {
+  color: red;       
+  cursor: pointer;  
+}
