@@ -71,4 +71,14 @@ h2 {
   margin-bottom: 10px;
 }
 
-  
+  /* 완료된 항목 텍스트에 대한 스타일 */
+.done-item-text {
+  color: gray;     
+  text-decoration: line-through; 
+}
+
+/* 삭제 버튼의 스타일 */
+.delete-btn {
+  color: red;       
+  cursor: pointer;  
+}
