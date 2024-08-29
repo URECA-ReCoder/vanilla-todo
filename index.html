@@ -8,7 +8,33 @@
   </head>
 
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <section>
+        <span class="title">To Do List</span>
+        <form onsubmit="return false">
+          <input type="text" id="todo-input" placeholder="할 일을 입력하세요" />
+          <button id="add-button">+</button>
+        </form>
+      </section>
+
+      <div class="division-line"></div>
+
+      <section class="todo-box">
+        <span class="todo-list-title">📝 TO DO (0)</span>
+        <div class="todo-div">
+          <ul id="todo-list"></ul>
+        </div>
+      </section>
+
+      <div class="division-line"></div>
+
+      <section class="done-box">
+        <span class="done-list-title">✔️ DONE (0)</span>
+        <div class="done-div">
+          <ul id="done-list"></ul>
+        </div>
+      </section>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
