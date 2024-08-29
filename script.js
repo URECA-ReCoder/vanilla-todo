@@ -5,8 +5,8 @@ const doneList = document.querySelector(".done-list");
 const todoCount = document.querySelector(".todo-list-container h2");
 const doneCount = document.querySelector(".done-list-container h2");
 
-let todoItems = []; 
-let doneItems = []; 
+const todoItems = []; 
+const doneItems = []; 
 
 // 버튼 클릭 시 호출되는 이벤트 리스너를 설정
 addButton.addEventListener("click", () => {
@@ -75,7 +75,9 @@ function renderDoneList() {
   doneList.innerHTML = ""; // 기존 목록 초기화
   doneItems.forEach((item, index) => {
     const li = document.createElement("li");
-    li.textContent = item;
+    const itemText = document.createElement("span");
+    itemText.textContent = item;
+    itemText.classList.add("done-item-text");
 
     // 삭제 버튼 생성
     const deleteBtn = document.createElement("span");
@@ -83,9 +85,12 @@ function renderDoneList() {
     deleteBtn.classList.add("delete-btn");
     deleteBtn.addEventListener("click", () => removeDoneItem(index));
 
-    li.appendChild(deleteBtn);
-    doneList.appendChild(li);
+    li.appendChild(itemText);  
+    li.appendChild(deleteBtn); 
+
+    doneList.appendChild(li); 
   });
   // 완료된 항목 수를 업데이트
   doneCount.textContent = `💿 DONE (${doneItems.length})`;
 }
+
