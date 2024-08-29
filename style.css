@@ -82,13 +82,12 @@ li {
   margin: 0 16px 16px;
 }
 
-#done-todo-item {
+#done-todo-list:nth-child(2) {
   color: lightgray;
   text-decoration: line-through;
 }
 
-#delete-btn,
-#done-delete-btn {
+li > button {
   margin-left: 10px;
   background: transparent;
   border: 0px;

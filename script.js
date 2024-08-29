@@ -25,7 +25,6 @@ function addTodo(event) {
   todoInput.focus(); // 입력 필드로 커서 이동
 
   $li.appendChild($btn);
-  $btn.setAttribute('id', 'delete-btn');
   $btn.innerText = '❌';
 
   // 삭제 버튼 클릭 시 해당 li 삭제
@@ -44,9 +43,6 @@ addTodoBtn.addEventListener('click', addTodo);
 function doneTodo(liItem) {
   let doneLi = document.createElement('li');
   let doneBtn = document.createElement('button');
-
-  doneLi.setAttribute('id', 'done-todo-item');
-  doneBtn.setAttribute('id', 'done-delete-btn');
 
   doneLi.innerText = liItem.innerText.replace('❌', ''); // *텍스트만 가져오기*
   doneTodoList.appendChild(doneLi);
