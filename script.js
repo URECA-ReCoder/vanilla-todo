@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const deleteBtn = document.createElement('span');
     deleteBtn.textContent = ' 🗑️';
 
+    // 항목 삭제 기능
     deleteBtn.addEventListener('click', (event) => {
-      // 항목 삭제 기능
+      // 이벤트 전파를 사전에 방지하기 위해 사용
       event.stopPropagation();
       li.remove();
       updateCount(); // 항목 삭제 후 갯수 업데이트
