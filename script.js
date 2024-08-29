@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   addTodoBtn.addEventListener('click', (event) => {
     // + 버튼 클릭 시 항목 추가
+    // Enter 입력 시에도 click 이벤트 발생
     event.preventDefault();
     addTodoItem();
   });
