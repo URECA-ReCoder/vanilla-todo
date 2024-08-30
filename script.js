@@ -91,7 +91,7 @@ function createTodoElement(todo) {
     newDoneBtn.innerText = "v";
     doneListElement.appendChild(newLi);
   } else {
-    newDoneBtn.innerHTML = "&nbsp;";
+    newDoneBtn.innerHTML = "";
     todoListElement.appendChild(newLi);
   }
 
