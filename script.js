@@ -23,7 +23,7 @@ todoInputButton.addEventListener("click", () => {
 
   const newTodo = {
     content: todoInputElement.value,
-    complete: false,
+    isComplete: false,
   };
 
   setTodoList(newTodo); //local storage에 저장
@@ -44,7 +44,7 @@ function setTodoList(todo) {
   for (let i = 0; i < newTodoList.length; i++) {
     if (
       newTodoList[i].content === todo.content &&
-      newTodoList[i].complete !== todo.complete
+      newTodoList[i].isComplete ! todo.isComplete
     ) {
       newTodoList.splice(i, 1);
       break;
@@ -69,7 +69,7 @@ function createTodoElement(todo) {
 
   //완료 버튼 클릭 시
   newDoneBtn.addEventListener("click", () => {
-    todo.complete = !todo.complete;
+    todo.iscomplete =todo.iscomplete;
     setTodoList(todo);
     createTodoElement(todo);
     newLi.remove();
@@ -87,7 +87,7 @@ function createTodoElement(todo) {
   });
 
   //완료 여부에 따라 todoList / doneList에 추가
-  if (todo.complete) {
+  if (todo.iscomplete) {
     newDoneBtn.innerText = "v";
     doneListElement.appendChild(newLi);
   } else {
