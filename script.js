@@ -9,8 +9,8 @@ const doneTodoListTitle = document.getElementById('done-todo-list-title'); // �
 function addTodo(event) {
   event.preventDefault(); // form 태그의 기본 새로고침 기능 지우기
 
-  let $li = document.createElement('li');
-  let $btn = document.createElement('button');
+  const $li = document.createElement('li');
+  const $btn = document.createElement('button');
 
   const todoText = todoInput.value.trim();
 
