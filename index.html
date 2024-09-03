@@ -6,9 +6,25 @@
     <title>Vanilla Todo</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <header>Todo List</header>
+      <form id="input-form" onsubmit="return false;">
+        <label for="todo-input">할 일 : </label>
+        <input id="todo-input" placeholder="할 일을 입력하세요" />
+        <button id="input-btn">+</button>
+      </form>
+      <section id="todo-list-section">
+        <h4 class="section-title" id="todo-num">📋 Todo (0)</h4>
+        <ul id="todo-list">
+        </ul>
+      </section>
+      <section id="done-list-section">
+        <h4 class="section-title done" id="done-num">👍🏻 Done (0)</h4>
+        <ul id="done-list">
+        </ul>
+      </section>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
